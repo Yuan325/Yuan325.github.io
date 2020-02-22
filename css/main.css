@@ -67,6 +67,7 @@ footer{
     background: none;
 }
 
+/* Nav bar */
 #main-menu .nav-bar { 
     list-style:none; 
     margin-top: 40px;
@@ -107,3 +108,76 @@ footer{
   font-weight: bold;
 }
 
+
+/* The sidebar menu */
+.sidenav {
+  width: 200px; /* Set the width of the sidebar */
+  position: fixed; /*Fixed Sidebar (stay in place on scroll) */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color:lightgray; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  height: 100%;
+}
+
+.sidenav-menu {
+  padding: 20px 8px 10px 25px;
+  font-size: 20px;
+  display: block;
+  border: none;
+  background-color: transparent;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: lighter;
+  text-decoration: none;
+  color: black;
+  text-shadow: 2px 2px 1px white;
+}
+
+.sidenav-menu2{
+  padding-top: 20px;
+  text-align: center;
+  font-size: 20px;
+  display: block;
+  border: none;
+  background-color: transparent;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: lighter;
+  text-decoration: none;
+  color: black;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav-select:hover,
+.sidenav-select:active {
+  background-color: gray;
+  color: white;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#cv-info{
+  padding-left: 300px;
+  padding-right: 100px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+table{
+  width: 100%;
+  min-width: 800px;
+}
+
+td{
+  padding:15px 5px ;
+  vertical-align: top;
+  line-height: 25px;
+  width: 50%;
+}
+
+ul, li{
+  padding-top: 0;
+  margin: 0;
+}

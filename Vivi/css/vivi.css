@@ -30,7 +30,7 @@ footer{
   }
   .bgimg-2{
     position: absolute;
-    opacity: 0.5;
+    opacity: 1;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -95,5 +95,9 @@ footer{
         padding-left: 30px;
         text-align: center;
     }
+
+    .bgimg-2{
+        opacity: 0.5;
+      }
 
 }

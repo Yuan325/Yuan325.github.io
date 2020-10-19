@@ -46,6 +46,50 @@ main{
     background-size: cover;
 }
 
+#gridid {
+		position: relative;
+		margin: 0 auto;
+}
+
+#gridid ul{
+	list-style: none;
+}
+
+#gridid .grid li {
+		float: left;
+		width: 250px;
+		height: 400px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: black;
+		margin: 0 10px 10px;
+}
+
+.grid-image{
+		height: 200px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+}
+
+.grid-text{
+		padding: 0px 10px;
+		font-size: medium;
+}
+
+.gray-btn {
+		background-color: #e7e7e7;
+		color: black;
+		margin: 20px 10px 0px 0px;
+		padding: 5px;
+		display: inline-block;
+		text-decoration: none;
+}
+
+.gray-btn:hover{
+		box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.4);
+		transition: 0.5s ease;
+}
 
 footer{
     text-align: center;

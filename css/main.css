@@ -18,8 +18,6 @@
   }
 
 header{
-    position: sticky;
-    position: -webkit-sticky;
     top: 0;
     padding-top: 3px;
     padding-bottom: 5px;
@@ -44,6 +42,26 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+
+footer{
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    height: 2.5rem;
+    width: 100%;
+    padding-left: 25px;
+}
+
+.centered {
+    display: inline;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    background: none;
 }
 
 #gridid {
@@ -91,24 +109,6 @@ main{
 		transition: 0.5s ease;
 }
 
-footer{
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    height: 2.5rem;
-    width: 100%;
-    padding-left: 25px;
-}
-
-.centered {
-    display: inline;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: none;
-    background: none;
-}
 
 /* Nav bar */
 #main-menu .nav-bar { 

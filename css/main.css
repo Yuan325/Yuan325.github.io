@@ -64,36 +64,6 @@ footer{
     background: none;
 }
 
-#gridid {
-		position: relative;
-		margin: 0 auto;
-}
-
-#gridid ul{
-	list-style: none;
-}
-
-#gridid .grid li {
-		float: left;
-		width: 250px;
-		height: 500px;
-		border-style: solid;
-		border-width: 1px;
-		border-color: black;
-		margin: 0 10px 10px;
-}
-
-.grid-image{
-		height: 200px;
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
-}
-
-.grid-text{
-		padding: 0px 10px;
-		font-size: medium;
-}
 
 .gray-btn {
 		background-color: #e7e7e7;
@@ -109,6 +79,48 @@ footer{
 		transition: 0.5s ease;
 }
 
+.projectlistul{
+	list-style-type: none;
+}
+
+.projectlistli{
+	padding: 15px;
+	margin: 10px;
+	min-width: 700px;
+	background-color: rgba(237, 237, 237, 0.4);
+}
+.projectlistli:hover{
+	box-shadow: 2px 2px 9px #ccc;
+}
+
+.list-image{
+	height: 100px;
+	margin: 0 auto;
+	display: inline-block;
+}
+
+.title{
+	font-weight: bold;
+	font-size: 40px;
+	margin-left: 40px;
+	text-shadow: 4px 4px 4px #ccc;
+}
+
+.projectbtn{
+	text-decoration: none;
+	border-radius: 25px;
+	background-color: #5a99f2;
+	color: white;
+	padding: 5px 15px;
+	margin-left: 15px;
+	box-shadow: 2px 2px 2px #98bced;
+}
+
+.projectbtn:hover{
+		background-color: #3a7bd5;
+		box-shadow: 4px 4px 9px #98bced;
+		transition: 0.3s ease;
+	}
 
 /* Nav bar */
 #main-menu .nav-bar { 

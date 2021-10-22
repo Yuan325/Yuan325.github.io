@@ -35,6 +35,7 @@ function generateBoard(){
         deactivatedList = deactivateAllCell();
         runAgent("-");
         reactivateCell(deactivatedList);
+        takeYourMove();
     }
 }
 
@@ -69,6 +70,7 @@ function restartGame(){
     n = null;
     m = null;
     winner = false;
+    document.getElementById("ttt-results").innerHTML = "Let's go!!!";
 }
 
 async function updateBoard(sign, moveNum){

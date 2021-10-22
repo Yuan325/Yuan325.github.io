@@ -18,6 +18,11 @@ function generateBoard(){
         restartGame();
         return;
     }
+    if (n > 20){
+        alert("Maximum size 20 to play this game! It will take a long time for agent to make a move")
+        restartGame();
+        return;
+    }
     boardHtml = ""
     for (let i = 0; i < n; i++){
         boardHtml += '<div class="ttt-row">';

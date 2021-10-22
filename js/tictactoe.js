@@ -6,13 +6,19 @@ let winner = false;
 function generateBoard(){
     n = document.getElementById('boardSize').value;
     m = document.getElementById('target').value;
-    let agentStart = document.getElementById('agentStart').value;
+    let agentStart = document.getElementById('agentStart').checked;
+    console.log(agentStart)
 
     document.getElementById('boardSize').disabled = true;
     document.getElementById('target').disabled = true;
     document.getElementById('agentStart').disabled = true;
 
     n = parseInt(n)
+    if (n == "" || m == ""){
+        alert("Please insert board size and target!")
+        restartGame();
+        return
+    }
     if (n < 3){
         alert("Minimum size 3 to play this game!")
         restartGame();
@@ -43,8 +49,8 @@ function generateBoard(){
     // if agent start first, call agent
     if (agentStart){
         deactivatedList = deactivateAllCell();
-        runAgent("-");
-        reactivateCell(deactivatedList);
+        moveNum = runAgent("-");
+        reactivateCell(deactivatedList, moveNum);
         takeYourMove();
     }
 }
@@ -61,10 +67,14 @@ function deactivateAllCell(){
     return deactivatedList
 }
 
-function reactivateCell(itemList){
+function reactivateCell(itemList, moveNum){
     if (!winner){
         for (const item of itemList){
-            item.style.pointerEvents = 'auto';
+            console.log("grid" + moveNum, item.id)
+            if (!(item.id == "grid" + moveNum)){
+                item.style.pointerEvents = 'auto';
+                console.log(item)
+            }
         }
     }
 }
@@ -102,8 +112,8 @@ async function clickGrid(object){
         // call agent
         deactivatedList = deactivateAllCell();
         waitForAgent();
-        await runAgent(i);
-        reactivateCell(deactivatedList);
+        moveNum = await runAgent(i);
+        reactivateCell(deactivatedList, moveNum);
         takeYourMove();
     }
 }
@@ -139,6 +149,7 @@ async function runAgent(prevMove){
     let i = parseInt(data['agent']);
     await updateBoard("X", i);
     await checkWin("X", i);
+    return i;
 }
 
 async function checkWin(sign, prevMove){

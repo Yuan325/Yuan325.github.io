@@ -23,6 +23,11 @@ function generateBoard(){
         restartGame();
         return;
     }
+    if (m > n){
+        alert("Target have to be smaller or equals to n")
+        restartGame();
+        return;
+    }
     boardHtml = ""
     for (let i = 0; i < n; i++){
         boardHtml += '<div class="ttt-row">';

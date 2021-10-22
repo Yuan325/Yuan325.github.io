@@ -1,0 +1,52 @@
+.tictactoe-board {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 100px;
+}
+
+.ttt-title {
+    text-align: center;
+    margin: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.ttt-input {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.ttt-btn {
+    font-size: 12px;
+}
+
+.ttt-input-cont {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.ttt-cell {
+    font-family: sans-serif;
+    display:inline-block;
+    height: 20px;
+    border-radius: 5px 5px 5px;
+    border: 1px solid blue;
+    width: 20px;
+    margin-left: 3px;
+    margin-top: 3px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    vertical-align: top;
+    text-align: center;
+}
+
+.ttt-results {
+    text-align: center;
+    margin-top: 15px;
+}

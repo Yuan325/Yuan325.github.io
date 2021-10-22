@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Projects</title>
+    <link rel="stylesheet" href="css/tictactoe.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <div id="page-container">
+        <div class="ttt-title">
+            nxn Tic Tac Toe game
+        </div>
+        <div class="ttt-input-cont">
+            Tic Tac Toe size:
+            <input type="text" class="ttt-input" id="boardSize" name="boardSize" />
+        </div>
+        <div class="ttt-input-cont">
+            Target (# in a row to win):
+            <input type="text" class="ttt-input" id="target" name="target" />
+        </div>
+        <div class="ttt-input-cont">
+            Agent start:
+            <input type="checkbox" class="ttt-input" id="agentStart" name="agentStart" />
+        </div>
+        <div class="ttt-input-cont">
+            <input type="button" class="ttt-btn" id="submitButton" value="Submit" onclick="generateBoard()" />
+            <input type="button" class="ttt-btn" id="newGameButton" value="New Game" onclick="restartGame()" />
+        </div>
+        <div class="ttt-results" id="ttt-results">Let's go!!</div>
+        <div class="tictactoe-board" id="tictactoe-board">
+        </div>
+        <footer>
+            <div class="container" style="font-size: small;">
+                &copy; 2021 - Jia Yuan Teoh
+            </div>
+        </footer>
+      </div>
+    <script src="js/tictactoe.js"></script>
+</body>
+</html>

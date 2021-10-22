@@ -88,17 +88,19 @@ async function updateBoard(sign, moveNum){
 async function clickGrid(object){
     let i = object.id.substring(4);
     i = parseInt(i);
-    setTimeout(await updateBoard("O", i));
+    await updateBoard("O", i);
 
     // check if user win
     await checkWin("O", i);
 
-    // call agent
-    deactivatedList = deactivateAllCell();
-    waitForAgent();
-    await runAgent(i);
-    reactivateCell(deactivatedList);
-    takeYourMove();
+    if (!winner){
+        // call agent
+        deactivatedList = deactivateAllCell();
+        waitForAgent();
+        await runAgent(i);
+        reactivateCell(deactivatedList);
+        takeYourMove();
+    }
 }
 
 function waitForAgent(){
@@ -130,7 +132,7 @@ async function runAgent(prevMove){
     data = await response.json();
     
     let i = parseInt(data['agent']);
-    setTimeout(await updateBoard("X", i));
+    await updateBoard("X", i);
     await checkWin("X", i);
 }
 

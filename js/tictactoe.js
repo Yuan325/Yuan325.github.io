@@ -49,10 +49,11 @@ function generateBoard(){
     // if agent start first, call agent
     if (agentStart){
         deactivatedList = deactivateAllCell();
+        waitForAgent();
         moveNum = runAgent("-");
         reactivateCell(deactivatedList, moveNum);
-        takeYourMove();
     }
+    takeYourMove();
 }
 
 function deactivateAllCell(){
